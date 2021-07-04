@@ -1,0 +1,13 @@
+html body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #000;
+}
+
+nav ul li{
+  list-style-type: none;
+}
+nav a{
+  color:white;
+  text-decoration: none;
+}
