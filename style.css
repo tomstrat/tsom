@@ -1,44 +1,80 @@
-:root{
-  --color-red: #ef1c3d;
-  --color-black: #000;
-  --color-white: #fff;
+:root {
+	--color-red: #ef1c3d;
+	--color-black: #000;
+	--color-white: #fff;
 }
 
 @font-face {
-  font-family: "seven-segment";
-  src: url('./Seven\ Segment.ttf');
+	font-family: 'seven-segment';
+	src: url('./Seven\ Segment.ttf');
 }
 
-html body{
-  margin: 0px;
-  padding: 0px;
-  background-color: #000;
-  font-family: "seven-segment";
+html body {
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--color-black);
+	font-family: 'seven-segment';
 }
-nav{
-  
-}
-nav ul{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position:relative;
-}
-nav ul li{
-  list-style-type: none;
-}
-nav a{
-  color:white;
-  text-decoration: none;
-  font-size: 40px;
-}
-nav a:hover{
-  color: var(--color-red);
 
+.nav-items {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	transition: all 0.5s ease;
+	transform: scaleY(1);
 }
-.logo{
-  width: 300px;
-  position: relative;
-  top: 20px;
-  transform: rotate(-10deg);
+nav .burger {
+	color: var(--color-white);
+	font-size: 30px;
+	margin-top: 40px;
+	display: none;
+	transition: all ease 0.5s;
+}
+.hide {
+	transform: scaleY(0);
+	overflow: hidden;
+}
+.rotate {
+	transform: rotate(90deg);
+}
+@media only screen and (max-width: 1200px) {
+	.nav-items {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.nav-item {
+		margin-top: 20px;
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
+	}
+	nav ul {
+		flex-direction: column;
+	}
+	nav .burger {
+		display: block;
+	}
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+}
+nav ul li {
+	list-style-type: none;
+}
+nav a {
+	color: var(--color-white);
+	text-decoration: none;
+	font-size: 40px;
+}
+nav a:hover {
+	color: var(--color-red);
+}
+.logo {
+	width: 300px;
+	position: relative;
+	top: 20px;
+	transform: rotate(-10deg);
 }
