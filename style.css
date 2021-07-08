@@ -9,40 +9,44 @@
 	src: url('./Seven\ Segment.ttf');
 }
 
-
-
 html body {
 	margin: 0px;
 	padding: 0px;
 	background-color: var(--color-black);
 	font-family: 'seven-segment';
-  color: var(--color-white);
+	color: var(--color-white);
 }
 
-h1{
-  font-size: 50px;
-  font-weight: 600;
-  text-align: center;
+h1 {
+	font-size: 50px;
+	font-weight: 600;
+	text-align: center;
 }
-h2{
-  font-size: 40px;
-  font-weight: 600;
-  text-align: center;
+h2 {
+	font-size: 40px;
+	font-weight: 600;
+	text-align: center;
 }
-h3{
-  font-size: 30px;
-  font-weight: 600;
-  text-align: center;
+h3 {
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
 }
-p{
-  font-size: 26px;
-  font-family: 'Jura', sans-serif;
-  font-weight: 400;
-  text-align: center;
+p {
+	font-size: 26px;
+	font-family: 'Jura', sans-serif;
+	font-weight: 400;
+	text-align: center;
 }
-
 
 /* Nav CSS */
+nav {
+	position: fixed;
+	width: 100%;
+	background-color: var(--color-black);
+	z-index: 100;
+}
+
 .nav-items {
 	display: flex;
 	justify-content: space-around;
@@ -65,6 +69,10 @@ nav .burger {
 	transform: rotate(90deg);
 }
 @media only screen and (max-width: 1200px) {
+	nav {
+		position: static;
+	}
+
 	.nav-items {
 		flex-direction: column;
 		align-items: center;
@@ -104,106 +112,205 @@ nav a:hover {
 	position: relative;
 	top: 20px;
 	transform: rotate(-10deg);
+	-webkit-filter: drop-shadow(5px 5px 3px #2f2f2f);
+	filter: drop-shadow(5px 5px 3px #2f2f2f);
 }
 /* Nav CSS */
 
-/* About CSS */
-#about{
-  display:flex;
-  align-items:center;
-  padding: 20px 100px;
+/* Hero CSS */
+#hero {
+	background-image: url('./images/band-tom-jon.jpg');
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 1100px;
+	display: flex;
+	align-items: center;
 }
-.about-text{
-  padding: 80px;
-}
-.about-image img{
-  width: 600px;
-  border: 4px solid white;
-  margin: 10px;
-  transform: rotate(-5deg);
-}
-
-@media only screen and (max-width: 600px) {
-  .about-image img{
-    width: 300px;
-  }
+.hero-logo {
+	padding-left: 100px;
+	width: 800px;
+	-webkit-filter: drop-shadow(5px 5px 3px #2f2f2f);
+	filter: drop-shadow(5px 5px 3px #2f2f2f);
 }
 
 @media only screen and (max-width: 1200px) {
-  #about{
-    flex-direction: column-reverse;
-  }
+	#hero {
+		justify-content: center;
+		height: 500px;
+	}
+	.hero-logo {
+		width: 300px;
+		padding-left: 0px;
+	}
+}
+/* Hero CSS */
+
+/* About CSS */
+#about {
+	display: flex;
+	align-items: center;
+	padding: 20px 100px;
+}
+.about-text {
+	padding: 80px;
+}
+.about-image img {
+	width: 600px;
+	border: 4px solid white;
+	margin: 10px;
+	transform: rotate(-5deg);
+}
+
+@media only screen and (max-width: 600px) {
+	.about-image img {
+		width: 300px;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	#about {
+		flex-direction: column-reverse;
+	}
 }
 
 /* About CSS */
 
 /* Members CSS */
 
-#members{
-  display:flex;
-  overflow: hidden;
+#members {
+	display: flex;
+	overflow: hidden;
 }
-.member{
-  display:flex;
-  align-items: center;
-  text-align:center;
-  padding: 10px;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 600px;
-  transition: all 0.5s ease-in;
-  transform: skew(-5deg);
-  overflow: hidden;
+.member {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	padding: 10px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 600px;
+	transition: all 0.5s ease-in;
+	transform: skew(-5deg);
+	overflow: hidden;
 }
-.jon{
-  background-image: url("./images/members-jon2.jpg");
+.jon {
+	background-image: url('./images/members-jon2.jpg');
 }
-.tom{
-  background-image: url("./images/members-tom.jpg");
+.tom {
+	background-image: url('./images/members-tom.jpg');
 }
-.darren{
-  background-image: url("./images/members-darren.jpg");
-  background-position: right center;
+.darren {
+	background-image: url('./images/members-darren.jpg');
+	background-position: right center;
 }
-.guitar{
-  background-image: url("./images/members-jon.jpg");
-}
-
-.member-content{
-  background-color: rgba(239,28,61, 0.4);
-  transform: scaleY(0);
-  transition: all 0.5s ease;
-  padding: 20px 10px;
-  box-shadow: 3px 3px 5px rgb(30,30,30);
+.guitar {
+	background-image: url('./images/members-jon.jpg');
 }
 
-.member:hover .member-content{
-  transform: scaleY(1);
+.member-content {
+	background-color: rgba(239, 28, 61, 0.4);
+	transform: scaleY(0);
+	transition: all 0.5s ease;
+	padding: 20px 10px;
+	box-shadow: 3px 3px 5px rgb(30, 30, 30);
 }
-.member:hover{
-  padding: 10px 100px;
+
+.member:hover .member-content {
+	transform: scaleY(1);
+}
+.member:hover {
+	padding: 10px 100px;
 }
 
 @media only screen and (max-width: 1200px) {
-  #members{
-    flex-direction: column;
-    transition: all 0.5s ease-in;
-  }
-  .member{
-    max-height: 400px;
-    height: auto;
-    transition: all 0.5s ease-in;
-    transform: skew(0deg);
-  }
-  .member:hover {
-    max-height: 2000px;
-    padding: 10px 20px;
-  }
-  .member:active{
-    max-height: 2000px;
-  }
-  .member-content{
-    max-height: 2000px;
-  }
+	#members {
+		flex-direction: column;
+		transition: all 0.5s ease-in;
+	}
+	.member {
+		max-height: 400px;
+		height: auto;
+		transition: all 0.5s ease-in;
+		transform: skew(0deg);
+	}
+	.member:hover {
+		max-height: 2000px;
+		padding: 10px 20px;
+	}
+	.member:active {
+		max-height: 2000px;
+	}
+	.member-content {
+		max-height: 2000px;
+	}
+}
+
+/* Members CSS */
+
+/* Music CSS */
+#music {
+	margin-top: 50px;
+}
+.music-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.music-container img {
+	width: 500px;
+	padding: 50px 100px 100px 100px;
+}
+
+.soundcloud {
+	display: flex;
+	align-items: center;
+	font-size: 100px;
+}
+
+@media only screen and (max-width: 1200px) {
+	.music-container {
+		flex-direction: column;
+	}
+
+	.music-container img {
+		width: 300px;
+		padding: 10px;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.soundcloud {
+		font-size: 50px;
+		padding-top: 20px;
+		justify-content: center;
+	}
+}
+
+/* Music CSS */
+#videos {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.video-container {
+	position: relative;
+	padding-bottom: 50%;
+}
+.youtube {
+	position: absolute;
+	margin: 0 auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 60%;
+	height: 60%;
+}
+
+@media only screen and (max-width: 1200px) {
+	.youtube {
+		width: 90%;
+		height: 90%;
+	}
 }
