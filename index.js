@@ -11,3 +11,15 @@ burger.addEventListener("click", e => {
     burger.classList.remove("rotate");
   }
 });
+
+const videoButtons = document.querySelectorAll(".video-button");
+const youtube = document.querySelector(".youtube");
+videoButtons.forEach(button => {
+  const data = button.dataset.src;
+  const url = `https://img.youtube.com/vi/${data}/0.jpg`;
+  button.style.backgroundImage = `url(${url})`;
+
+  button.addEventListener("click", e => {
+    youtube.src = `https://www.youtube.com/embed/${data}`;
+  });
+});
