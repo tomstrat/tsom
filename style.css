@@ -21,6 +21,21 @@ h1 {
 	font-size: 50px;
 	font-weight: 600;
 	text-align: center;
+	transform: skew(20deg);
+	margin: 5px 0px;
+}
+
+.center{
+	display:flex;
+	justify-content: center;
+	width: auto;
+	margin-bottom: 20px;
+}
+.backskew{
+	background-color: var(--color-red);
+	padding: 10px 50px;
+	transform: skew(-20deg);
+	display:inline-block;
 }
 h2 {
 	font-size: 40px;
@@ -252,6 +267,7 @@ nav a:hover {
 /* Music CSS */
 #music {
 	margin-top: 50px;
+
 }
 .music-container {
 	display: flex;
