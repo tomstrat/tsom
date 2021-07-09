@@ -1,7 +1,8 @@
+//Mobile Menu
 const burger = document.querySelector(".burger");
 const navItems = document.querySelector(".nav-items");
 burger.addEventListener("click", e => {
-  if(navItems.classList.contains("hide")){
+  if (navItems.classList.contains("hide")) {
     console.log("removing hide");
     navItems.classList.remove("hide");
     burger.classList.add("rotate");
@@ -12,6 +13,7 @@ burger.addEventListener("click", e => {
   }
 });
 
+//Video Changer
 const videoButtons = document.querySelectorAll(".video-button");
 const youtube = document.querySelector(".youtube");
 videoButtons.forEach(button => {
@@ -21,5 +23,18 @@ videoButtons.forEach(button => {
 
   button.addEventListener("click", e => {
     youtube.src = `https://www.youtube.com/embed/${data}`;
+  });
+});
+
+//Gallery Lightbox
+const imageCells = document.querySelectorAll(".image-cell");
+const lightbox = document.querySelector(".lightbox");
+
+imageCells.forEach(cell => {
+  cell.addEventListener("click", e => {
+    const number = cell.parentElement.href;
+    const image = cell.style.backgroundImage;
+    lightbox.id = number;
+    lightbox.firstElementChild.style.backgroundImage = image;
   });
 });
