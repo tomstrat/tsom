@@ -32,9 +32,14 @@ const lightbox = document.querySelector(".lightbox");
 
 imageCells.forEach(cell => {
   cell.addEventListener("click", e => {
-    const number = cell.parentElement.href;
+    const number = cell.parentElement.href.match(/#\w+/)[0];
     const image = cell.style.backgroundImage;
     lightbox.id = number;
     lightbox.firstElementChild.style.backgroundImage = image;
+    lightbox.style.display = "block";
   });
+});
+
+lightbox.addEventListener("click", e => {
+  lightbox.style.display = "none";
 });

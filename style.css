@@ -349,19 +349,25 @@ nav a:hover {
 	align-items: center;
 	width: 60%;
 	margin: 0 auto;
+	flex-wrap: wrap;
 }
 .image-row{
 	display:flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	width: 100%;
 	margin-top: 30px;
 }
 .image-cell{
 	background-position: center center;
-	background-size: cover;
+	background-size: 100%;
 	background-repeat: no-repeat;
 	height: 200px;
 	width: 200px;
+}
+.image-cell:hover{
+	background-size: 150%;
+	transition: background-size 0.5s ease-in-out;
 }
 .lightbox{
 	display:none;
@@ -378,10 +384,6 @@ nav a:hover {
 	background: rgba(0,0,0,0.8);
 }
 
-.lightbox:target{
-	display:block;
-}
-
 .lightbox span{
 	display:block;
 	width: 100%;
@@ -390,4 +392,32 @@ nav a:hover {
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+
+/* Gallery CSS */
+
+/* Contact CSS */
+
+#contact{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
+}
+#contact strong, #contact span{
+	font-size: 30px;
+	margin-top: 10px;
+	font-family: 'Jura', sans-serif;
+}
+
+#contact a{
+	text-decoration: none;
+	color: var(--color-white);
+}
+
+@media only screen and (max-width: 1200px) {
+	#contact strong, #contact span{
+		font-size: 22px;
+		text-align: center;
+	}
 }
