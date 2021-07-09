@@ -266,7 +266,7 @@ nav a:hover {
 .soundcloud {
 	display: flex;
 	align-items: center;
-	font-size: 100px;
+	width: 800px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -285,6 +285,11 @@ nav a:hover {
 		font-size: 50px;
 		padding-top: 20px;
 		justify-content: center;
+		width: 100%;
+	}
+
+	.soundcloud iframe{
+		height: 500px;
 	}
 }
 
