@@ -1,6 +1,6 @@
 :root {
-	--color-red: #ef1c3d;
-	--color-black: #000;
+	--color-red: #f12eae;
+	--color-black: #2dd7ec;
 	--color-white: #fff;
 }
 
@@ -225,7 +225,7 @@ nav a:hover {
 }
 
 .member-content {
-	background-color: rgba(239, 28, 61, 0.4);
+	background-color: rgba(235, 18, 198, 0.4);
 	transform: scaleY(0);
 	transition: all 0.5s ease;
 	padding: 20px 10px;
